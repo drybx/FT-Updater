@@ -163,7 +163,7 @@ else:
     old_strat_version = re.search('return "v(.+?)"', local_strat).group(1)
     print('Local strategy version {} file successfully loaded'.format(old_strat_version))
 
-if local_strat[8800:9000] == remote_strat[8800:9000]:
+if local_strat[8800:9400] == remote_strat[8800:9400]:
     print('Strategy file up to date.')
 else:
     print('New version of strategy available.')
