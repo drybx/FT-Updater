@@ -148,8 +148,9 @@ try:
 except Exception:
     print('Could not download remote strategy file from Github')
 else:
-    print('Remote strategy successfully downloaded from Github')
     remote_strat = remote_strat.decode('utf-8')
+    remote_strat_version = re.search('return "v(.+?)"', remote_strat).group(1)
+    print('Remote strategy version {} successfully downloaded from Github'.format(remote_strat_version))
 
 # Load local strategy file
 try:
@@ -160,10 +161,10 @@ except FileNotFoundError:
 except Exception as e:
     print(e)
 else:
-    old_strat_version = re.search('return "v(.+?)"', local_strat).group(1)
-    print('Local strategy version {} file successfully loaded'.format(old_strat_version))
+    local_strat_version = re.search('return "v(.+?)"', local_strat).group(1)
+    print('Local strategy version {} file successfully loaded'.format(local_strat_version))
 
-if local_strat[8800:9400] == remote_strat[8800:9400]:
+if remote_strat_version == local_strat_version:
     print('Strategy file up to date.')
 else:
     print('New version of strategy available.')
