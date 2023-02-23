@@ -226,7 +226,7 @@ else:
 
 messagetext = 'Updates for *FT {}*:\n'.format(exchange)
 if nfiupdate:
-    messagetext = messagetext + '\U0001F539 NFIX to version {} from {}'.format(new_strat_version, old_strat_version) + '\n'
+    messagetext = messagetext + '\U0001F539 NFIX to version {} from {}'.format(new_strat_version, local_strat_version) + '\n'
     nfiupdate = False
 if blupdate:
     messagetext = messagetext + '\U0001F539 Blacklist' + '\n'
