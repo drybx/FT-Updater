@@ -144,7 +144,7 @@ except Exception as e:
 
 # Downloading remote strategy file from Github
 try:
-    remote_strat = urlopen('https://raw.githubusercontent.com/iterativv/NostalgiaForInfinity/main/NostalgiaForInfinityX.py').read()
+    remote_strat = urlopen('https://raw.githubusercontent.com/iterativv/NostalgiaForInfinity/main/NostalgiaForInfinityX2.py').read()
 except Exception:
     print('Could not download remote strategy file from Github')
 else:
