@@ -144,7 +144,7 @@ except Exception as e:
 
 # Downloading remote strategy file from Github
 try:
-    remote_strat = urlopen('https://raw.githubusercontent.com/iterativv/NostalgiaForInfinity/main/NostalgiaForInfinityX.py').read()
+    remote_strat = urlopen('https://raw.githubusercontent.com/iterativv/NostalgiaForInfinity/main/NostalgiaForInfinityX2.py').read()
 except Exception:
     print('Could not download remote strategy file from Github')
 else:
@@ -226,13 +226,13 @@ else:
 
 messagetext = 'Updates for *FT {}*:\n'.format(exchange)
 if nfiupdate:
-    messagetext = messagetext + '\U0001F539 NFIX to version {} from {}'.format(new_strat_version, old_strat_version) + '\n'
+    messagetext = messagetext + '\U0001F539 NFIX2 update' + '\n'
     nfiupdate = False
 if blupdate:
-    messagetext = messagetext + '\U0001F539 Blacklist' + '\n'
+    messagetext = messagetext + '\U0001F539 Blacklist update' + '\n'
     blupdate = False
 if ftupdate:
-    messagetext = messagetext + '\U0001F539 Freqtrade' + '\n'
+    messagetext = messagetext + '\U0001F539 Freqtrade update' + '\n'
     ftupdate = False
 print(messagetext)
 
